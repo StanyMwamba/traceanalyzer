@@ -2,18 +2,19 @@
 this library provides tools for analyzing ns2 trace file using python
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install traceanalyzer.
 
 ```bash
-pip install foobar
+pip3 install traceanalyzer
+
 ```
 
 ## Usage
 
 ```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
+import  traceanalyzer as tr
+#analysis of end-to-end delay
+eedelay=tr.Eedelay('tracefile1.tr','33') # returns 'words'
 foobar.pluralize('goose') # returns 'geese'
 foobar.singularize('phenomena') # returns 'phenomenon'
 ```
