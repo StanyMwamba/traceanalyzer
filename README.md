@@ -1,6 +1,7 @@
 # traceanalyzer
 This library  provides analyzing and plotting functions for ns2 trace file in Python. Bellow, example of   ns2 trace file content.
-####Example: content of ns2 trace file
+
+#### Example: content of ns2 trace file
 ```
 + 4.451157 6 10 tcp 1540 ------- 0 32.0 33.0 197 2293
 - 4.451157 6 10 tcp 1540 ------- 0 32.0 33.0 197 2293
@@ -24,80 +25,80 @@ r 4.53165 23 33 tcp 1540 ------- 0 32.0 33.0 193 2289
 + 4.53165 33 23 ack 40 ------- 0 33.0 32.0 193 2315
 - 4.53165 33 23 ack 40 ------- 0 33.0 32.0 193 2315
 ```
-##Structure
+## Structure
 `traceanalyzer` provide four main classes : `Eedelay`, `Pdr`, `Throughput` and `Nrl`.<br>
 According to [`RFC` (Request for comments)](https://rfc-editor.org) those main classes compute the average of end-to-end delay, the Packet Delivery Ratio, the Throughput and the Normalized Routing Load from `ns2 trace file`. Those provide also plotting and data array extracted from ns2 trace file.
 
 
-###`Eedelay` class
+### `Eedelay` class
 For managing (computing, sampling and plotting) the average of end-to-end delay of simulation from trace file.<br>
 `end-to-end delay=Time/No.Sample`
-####arguments
+#### arguments
 -1st: trace file<br>
 -2nd: node
-####outputs
-#####data array
+#### outputs
+##### data array
 Data without sampling.<br>
 `eedelay_array` <br>
 `time_array` <br>
 Data with sampling.<br>
 `eedelay_sample` <br>
 `time_sample` <br>
-#####constant
+##### constant
 value      
-###`Pdr` class
+### `Pdr` class
 For managing (computing, sampling and plotting) the Packet Delivery Ratio (`PDR`) of simulation from trace file.<br>
 `PDR=No.delivered Packet/No.Sent Packet`
-####arguments
+#### arguments
 -1st: trace file<br>
 -2nd: node
-####outputs
-#####data array
+#### outputs
+##### data array
 Data without sampling.<br>
 `pdr_array` <br>
 `time_array` <br>
 Data with sampling.<br>
 `pdr_sample` <br>
 `time_sample` <br>
-#####constant
+##### constant
 value  
         
-###`Throughput` class
+### `Throughput` class
 For managing (computing, sampling and plotting) the Throughput average of simulation from trace file.<br>
 `Average Throughput=Packet received/Time Taken`
-####arguments
+####  arguments
 -1st: trace file<br>
 -2nd: node
-####outputs
-#####data array
+#### outputs
+##### data array
 Data without sampling.<br>
 `throughput_array` <br>
 `time_array` <br>
 Data with sampling.<br>
 `throughput_sample` <br>
 `time_sample` <br>
-#####constant
+##### constant
 value 
-###`Nrl` class
+### `Nrl` class
 For managing (computing, sampling and plotting) the Normalized Routing Load (`NRL`) of simulation from trace file.<br>
 `NRL=No.Routed packet/No.Delivery packet`
-####arguments
+#### arguments
 -1st: trace file<br>
 -2nd: routing packet type
-####outputs
-#####data array
+#### outputs
+#####  data array
 Data without sampling.<br>
 `nrl_array` <br>
 `time_array` <br>
 Data with sampling.<br>
 `nrl_sample` <br>
 `time_sample` <br>
-#####constant
+##### constant
 value 
-###`Common` methods
-####sample()
+### `Common` methods
+#### sample()
 For sampling data, by default sampling step is 1 sec.
-####plot()
+#### plot()
 for plotting data, the arguments are the same than matplotlib.
 ## Installation
 
