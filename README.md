@@ -110,8 +110,8 @@ pip3 install traceanalyzer
 ```
 
 ## Usage
-###Eedelay: End-to-End delay
-####code
+### Eedelay: End-to-End delay
+#### code
 ```python
 import  traceanalyzer as tr
 #end-to-end delay
@@ -128,7 +128,7 @@ for instant in time:
     print(instant,' ',eedelay[idx]) 
     idx+=1
 ```
-####output
+#### output
 ![alt eedelay](doc/eedelay.png)
 
 ```
@@ -153,8 +153,8 @@ for instant in time:
 18.14704   0.008527744360902256
 19.14704   0.008498464269862406
 ```
-###Pdr: Packet Delivery Ratio
-####code
+### Pdr: Packet Delivery Ratio
+#### code
 ```python
 import traceanalyzer as tr
 #Packet Delivery Ratio
@@ -169,7 +169,7 @@ for instant in time:
     print(instant,' ',pdr[idx]) 
     idx+=1
 ```
-####output
+#### output
 ![alt pdr](doc/pdr.png)
 
 ```
@@ -199,8 +199,8 @@ for instant in time:
 23.322692   1.0
 24.352604   1.0
 ```
-###Throughput
-####code
+### Throughput
+#### code
 ```python
 import  traceanalyzer as tr
 #Throughput
@@ -215,7 +215,7 @@ for instant in time:
     print(instant,' ',throughput[idx]) 
     idx+=1
 ```
-####output
+#### output
 ![alt throughput](doc/throughput.png)
 
 ```
@@ -244,8 +244,8 @@ for instant in time:
 23.322692   815.0002581177164
 24.352604   780.5325459240416
 ```
-###Nrl: Normalized Routing Load
-####code
+### Nrl: Normalized Routing Load
+#### code
 ```python
 import  traceanalyzer as tr
 #Normalized Routing Load
@@ -260,7 +260,7 @@ for instant in time:
     print(instant,' ',nrl[idx]) 
     idx+=1
 ```
-####output
+#### output
 ![alt nrl](doc/nrl.png)
 
 ```
